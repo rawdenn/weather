@@ -125,9 +125,9 @@ class _WeatherHomePageState extends State<WeatherHomePage>
     final Color iconColor = isDay ? Colors.black87 : Colors.white;
 
     if (errorMessage != null) {
-      bodyContent = Center(child: Text(errorMessage!));
+      bodyContent = Center(child: Text(errorMessage!, style: TextStyle(color: textColor)));
     } else if (weatherData == null) {
-      bodyContent = const Center(child: Text("No weather data yet"));
+      bodyContent = Center(child: Text("No weather data yet", style: TextStyle(color: textColor)));
     } else {
       bodyContent = TabBarView(
         controller: _tabController,
